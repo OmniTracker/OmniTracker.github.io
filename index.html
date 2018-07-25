@@ -14,6 +14,15 @@
 <body>
 <a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
       
+      
+      <a-entity position="20 5 0 " >
+                rotation="0 180 0">
+                <a-camera look-controls wasd-controls="acceleration: 1000" >
+                </a-camera>
+                <a-cursor scale="0.5 0.5" 
+                color="#fff"></a-cursor>
+      </a-entity>
+      
       <a-entity position="-6 1 -6"  
             rotation="30 45 0">
             <a-box class="cube" 
