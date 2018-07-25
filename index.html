@@ -12,8 +12,20 @@
       <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.1.2/dist/aframe-physics-system.min.js"></script>
 </head>
 <body>
-<a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js" 
-         physics="debug: true">
+<a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
+      
+      <a-entity dynamic-body position="-6 1 -6"  
+            rotation="30 45 0">
+            <a-box class="cube" 
+                  width="0.5" 
+                  height="0.5" 
+                  depth="0.5" 
+                  color="green"
+                  link="href: full_web/movo/index.html; title:  Movo Model Demo">
+            </a-box>
+      </a-entity>
+      
+      
 
     <!-- All of this must be done before you relax -->
     <a-sphere position="0 1.25 -1" 
