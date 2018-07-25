@@ -17,8 +17,8 @@
       <a-sky color="#ECECEC">
       </a-sky>
       
-      <a-entity position="20 5 0"
-                rotation="0 0 0">
+      <a-entity position="10 3 0"
+                rotation="0 180 0">
             
                 <a-camera look-controls wasd-controls="acceleration: 500" >
                 </a-camera>
@@ -28,11 +28,12 @@
       
       <a-entity position="-6 1 -6"  
             rotation="30 45 0">
-            <a-box class="cube"                   width="0.5" 
-                  height="0.5" 
-                  depth="0.5" 
-                  color="green"
-                  link="href: full_web/movo/index.html; title:  Movo Model Demo">
+            <a-box class="cube"                   
+                   width="0.5" 
+                   height="0.5"
+                   depth="0.5" 
+                   color="green"
+                   link="href: full_web/movo/index.html; title:  Movo Model Demo">
             </a-box>
       </a-entity>
       
@@ -59,138 +60,129 @@
              height="20" 
              color="#7BC8A4">
       </a-plane>
-      
-      <!-- 
-            Head portion of Baxter
-      -->
-      <a-entity position="0 0 0.0">      
-            <a-entity id="head_h0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/head/H0.DAE" 
-                      position="0.268 0.726 -0.008180191624472154">            
+     
+      <a-entity position="0 0 0"   
+            <!-- 
+                  Head portion of Baxter
+            -->
+            <a-entity position="0 0 0.0">      
+                  <a-entity id="head_h0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/head/H0.DAE" 
+                            position="0.268 0.726 -0.008180191624472154">            
+                  </a-entity>
+
+                  <a-entity id="head_h1_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/head/H1.DAE" 
+                            position="0.35839962277055837 0.716116414819445 -0.023403322247323475" 
+                            rotation="90 1.3557039007679346e-14 1.3430566044970796e-14">            
+                  </a-entity>
             </a-entity>
 
-            <a-entity id="head_h1_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/head/H1.DAE" 
-                      position="0.35839962277055837 0.716116414819445 -0.023403322247323475" 
-                      rotation="90 1.3557039007679346e-14 1.3430566044970796e-14">            
-            </a-entity>
-      </a-entity>
-      
-      <!-- 
-            Base
-      -->
-      <a-entity position="0 0 0.0">
-            <a-entity id="base" 
-                      collada-model="https://raw.githubusercontent.com/ericrosenbrown/WebVR/master/baxdae.dae"
-                      position="0.0 0.0 0.0">    
-            </a-entity>
-
-            <a-entity id="torso" 
-                          collada-model="https://raw.githubusercontent.com/ericrosenbrown/WebVR/master/base_link.DAE"
-                          position="0.0 0.0 0.0">
-            </a-entity>
-
-            <a-entity id="base_pedestal" 
-                          collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/base/PEDESTAL.DAE"> 
-                          position="0.0 0.0 0.0"
+            <!-- 
+                  Base
+            -->
+            <a-entity position="2 2 2">
+                  <a-entity id="base" 
+                            collada-model="https://raw.githubusercontent.com/ericrosenbrown/WebVR/master/baxdae.dae"
+                            position="0.0 0.0 0.0">    
+                  </a-entity>
+                  <a-entity id="torso" 
+                                collada-model="https://raw.githubusercontent.com/ericrosenbrown/WebVR/master/base_link.DAE"
+                                position="0.0 0.0 0.0">
+                  </a-entity>
+                  <a-entity id="base_pedestal" 
+                                collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/base/PEDESTAL.DAE"> 
+                                position="0.0 0.0 0.0"
+                  </a-entity>
+                  <a-entity id="torso_base_link" 
+                                collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/torso/base_link.DAE"> 
+                                position="0.0 0.0 0.0"
+                  </a-entity>
             </a-entity>
 
-            <a-entity id="torso_base_link" 
-                          collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/torso/base_link.DAE"> 
-                          position="0.0 0.0 0.0"
+            <!-- 
+                  Left section of the robot
+            -->
+            <a-entity position="0 0 0.25">
+                  <a-entity id="upper_shoulder_s0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_shoulder/S0.DAE" 
+                            position="0.26 0.125 0">
+                  </a-entity>
+                  <a-entity id="upper_elbow_e0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_elbow/E0.DAE" 
+                            rotation="0 0 -45" 
+                            position="0.3980794476167059 0.46026184954156335 0">            
+                  </a-entity>
+                  <a-entity id="upper_forearm_w0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_forearm/W0.DAE" 
+                            rotation="0 0 -135" 
+                            position="0.7130431290945685 0.5081025480924373 0">
+                  </a-entity>
+                  <a-entity id="lower_shoulder_s0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_shoulder/S1.DAE" 
+                            rotation="46.937114037548724 89.99999999999999 89.99999999999999" 
+                            position="0.3178713751356403 0.3896776750061277 0">            
+                  </a-entity>
+                  <a-entity id="lower_elbow_e0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_elbow/E1.DAE" 
+                            rotation="135 95 90" 
+                            position="0.6349535976851299 0.5879419406642027 0">            
+                  </a-entity>
+                  <a-entity id="wrist_w0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/wrist/W2.DAE" 
+                            rotation="0 0 -150.02340296106686" 
+                            position="0.9590566368461492 0.20090062126837505 0">            
+                  </a-entity>
+                  <a-entity id="lower_forearm_w0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_forearm/W1.DAE" 
+                            position="0.902934227953464 0.3028340795255815 0" 
+                            rotation="-29.999999999999996 90 -90">            
+                  </a-entity>
             </a-entity>
-                  
-      </a-entity>
+            <!-- 
+                  Right section of the robot
+            -->
+            <a-entity position="0 0 -.25">
+                  <a-entity id="upper_shoulder_s0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_shoulder/S0.DAE" 
+                            position="0.26 0.125 0">
+                  </a-entity>
 
-      <!-- 
-            Left section of the robot
-      -->
-      <a-entity position="0 0 0.25">
-            <a-entity id="upper_shoulder_s0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_shoulder/S0.DAE" 
-                      position="0.26 0.125 0">
-            </a-entity>
-            
-            <a-entity id="upper_elbow_e0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_elbow/E0.DAE" 
-                      rotation="0 0 -45" 
-                      position="0.3980794476167059 0.46026184954156335 0">            
-            </a-entity>
-            
-            <a-entity id="upper_forearm_w0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_forearm/W0.DAE" 
-                      rotation="0 0 -135" 
-                      position="0.7130431290945685 0.5081025480924373 0">
-            </a-entity>
-            
-            <a-entity id="lower_shoulder_s0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_shoulder/S1.DAE" 
-                      rotation="46.937114037548724 89.99999999999999 89.99999999999999" 
-                      position="0.3178713751356403 0.3896776750061277 0">            
-            </a-entity>
-            
-            <a-entity id="lower_elbow_e0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_elbow/E1.DAE" 
-                      rotation="135 95 90" 
-                      position="0.6349535976851299 0.5879419406642027 0">            
-            </a-entity>
-            
-            <a-entity id="wrist_w0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/wrist/W2.DAE" 
-                      rotation="0 0 -150.02340296106686" 
-                      position="0.9590566368461492 0.20090062126837505 0">            
-            </a-entity>
-            
-            <a-entity id="lower_forearm_w0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_forearm/W1.DAE" 
-                      position="0.902934227953464 0.3028340795255815 0" 
-                      rotation="-29.999999999999996 90 -90">            
-            </a-entity>
-      </a-entity>
-      
-      <!-- 
-            Right section of the robot
-      -->
-      <a-entity position="0 0 -.25">
-            <a-entity id="upper_shoulder_s0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_shoulder/S0.DAE" 
-                      position="0.26 0.125 0">
-            </a-entity>
-            
-            <a-entity id="upper_elbow_e0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_elbow/E0.DAE" 
-                      rotation="0 0 -45" 
-                      position="0.3980794476167059 0.46026184954156335 0">            
-            </a-entity>
-           
-            <a-entity id="upper_forearm_w0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_forearm/W0.DAE" 
-                      rotation="0 0 -135" 
-                      position="0.7130431290945685 0.5081025480924373 0">
-            </a-entity>
-            
-            <a-entity id="lower_shoulder_s0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_shoulder/S1.DAE" 
-                      rotation="46.937114037548724 89.99999999999999 89.99999999999999" 
-                      position="0.3178713751356403 0.3896776750061277 0">            
-            </a-entity>
-            
-            <a-entity id="lower_elbow_e0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_elbow/E1.DAE" 
-                      rotation="135 95 90" 
-                      position="0.6349535976851299 0.5879419406642027 0">            
-            </a-entity>
-            
-            <a-entity id="wrist_w0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/wrist/W2.DAE" 
-                      rotation="0 0 -150.02340296106686" 
-                      position="0.9590566368461492 0.20090062126837505 0">            
-            </a-entity>
-            
-            <a-entity id="lower_forearm_w0_entity" 
-                      collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_forearm/W1.DAE" 
-                      position="0.902934227953464 0.3028340795255815 0" 
-                      rotation="-29.999999999999996 90 -90">            
+                  <a-entity id="upper_elbow_e0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_elbow/E0.DAE" 
+                            rotation="0 0 -45" 
+                            position="0.3980794476167059 0.46026184954156335 0">            
+                  </a-entity>
+
+                  <a-entity id="upper_forearm_w0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/upper_forearm/W0.DAE" 
+                            rotation="0 0 -135" 
+                            position="0.7130431290945685 0.5081025480924373 0">
+                  </a-entity>
+
+                  <a-entity id="lower_shoulder_s0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_shoulder/S1.DAE" 
+                            rotation="46.937114037548724 89.99999999999999 89.99999999999999" 
+                            position="0.3178713751356403 0.3896776750061277 0">            
+                  </a-entity>
+
+                  <a-entity id="lower_elbow_e0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_elbow/E1.DAE" 
+                            rotation="135 95 90" 
+                            position="0.6349535976851299 0.5879419406642027 0">            
+                  </a-entity>
+
+                  <a-entity id="wrist_w0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/wrist/W2.DAE" 
+                            rotation="0 0 -150.02340296106686" 
+                            position="0.9590566368461492 0.20090062126837505 0">            
+                  </a-entity>
+
+                  <a-entity id="lower_forearm_w0_entity" 
+                            collada-model="https://raw.githubusercontent.com/RethinkRobotics/baxter_common/master/baxter_description/meshes/lower_forearm/W1.DAE" 
+                            position="0.902934227953464 0.3028340795255815 0" 
+                            rotation="-29.999999999999996 90 -90">            
+                  </a-entity>
             </a-entity>
       </a-entity>
 </a-scene>
