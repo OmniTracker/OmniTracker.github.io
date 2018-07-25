@@ -14,6 +14,8 @@
 <body>
 <a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
       
+      <a-sky color="#ECECEC">
+      </a-sky>
       
       <a-entity position="20 5 0 " >
                 rotation="0 180 0">
@@ -25,8 +27,7 @@
       
       <a-entity position="-6 1 -6"  
             rotation="30 45 0">
-            <a-box class="cube" 
-                  width="0.5" 
+            <a-box class="cube"                   width="0.5" 
                   height="0.5" 
                   depth="0.5" 
                   color="green"
@@ -57,9 +58,52 @@
              height="20" 
              color="#7BC8A4">
       </a-plane>
-
-      <a-sky color="#ECECEC">
-    </a-sky>
+      
+      <!-- 
+      Right section of the robot
+      -->
+      <a-entity position="0 0 -.25">
+            <a-entity id="upper_shoulder_s0_entity" 
+                      collada-model="models/upper_shoulder/upper_shoulder_right.dae" 
+                      position="0.26 0.125 0">
+            </a-entity>
+            
+            <a-entity id="upper_elbow_e0_entity" 
+                      collada-model="models/upper_elbow/upper_elbow_right.dae" 
+                      rotation="0 0 -45" 
+                      position="0.3980794476167059 0.46026184954156335 0">            
+            </a-entity>
+           
+            <a-entity id="upper_forearm_w0_entity" 
+                      collada-model="models/upper_forearm/upper_forearm_right.dae" 
+                      rotation="0 0 -135" 
+                      position="0.7130431290945685 0.5081025480924373 0">
+            </a-entity>
+            
+            <a-entity id="lower_shoulder_s0_entity" 
+                      collada-model="models/lower_shoulder/lower_shoulder_right.dae" 
+                      rotation="46.937114037548724 89.99999999999999 89.99999999999999" 
+                      position="0.3178713751356403 0.3896776750061277 0">            
+            </a-entity>
+            
+            <a-entity id="lower_elbow_e0_entity" 
+                      collada-model="models/lower_elbow/lower_elbow_right.dae" 
+                      rotation="135 95 90" 
+                      position="0.6349535976851299 0.5879419406642027 0">            
+            </a-entity>
+            
+            <a-entity id="wrist_w0_entity" 
+                      collada-model="models/wrist/wrist_right.dae" 
+                      rotation="0 0 -150.02340296106686" 
+                      position="0.9590566368461492 0.20090062126837505 0">            
+            </a-entity>
+            
+            <a-entity id="lower_forearm_w0_entity" 
+                      collada-model="models/lower_forearm/lower_forearm_right.dae" 
+                      position="0.902934227953464 0.3028340795255815 0" 
+                      rotation="-29.999999999999996 90 -90">            
+            </a-entity>
+      </a-entity>
 </a-scene>
 </body>
 </html>
